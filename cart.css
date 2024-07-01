@@ -1,0 +1,110 @@
+:root {
+    --font-size-body: 16px;
+    --font-family-body: Arial, Helvetica, sans-serif;
+    --color-text: #333;
+    --color-link: #000;
+    --color-link-hover: #ff4000;
+    --color-background: whitesmoke;
+    --color-background-section: pink;
+    --color-background-secondary: #EAE2D8;
+    --color-button: #007bff;
+    --color-button-hover: #0056b3;
+    --color-star: #ff4000;
+    --color-star-secondary: #ff0000;
+    --color-overlay-text: #fff;
+    --transition-default: 0.3s ease;
+    --border-radius-default: 8px;
+    --box-shadow-default: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: var(--font-size-body);
+    font-family: var(--font-family-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-link);
+    transition: color var(--transition-default);
+  }
+  
+  a:hover {
+    color: var(--color-link-hover);
+  }
+  
+  header {
+    height: 140px;
+    width: 100%;
+    background-color: var(--color-background);
+  }
+  .bot_header {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-left: 100px;
+  }
+  
+  /* Menu */
+  .menu {
+    display: flex;
+    list-style: none;
+    margin-left: 200px;
+  }
+  
+  .menu-item {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .menu-item a {
+    color: var(--color-text);
+    padding: 10px 15px;
+    display: block;
+  }
+  
+  .menu-item:hover > a {
+    color: var(--color-link-hover);
+  }
+  
+  /* Sub-menu */
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: var(--box-shadow-default);
+    z-index: 10;
+  }
+  
+  .menu-item:hover .sub-menu {
+    display: block;
+  }
+  
+  .sub-menu li {
+    display: block;
+  }
+  
+  .sub-menu li a {
+    padding: 10px 15px;
+    color: var(--color-text);
+    transition: background-color var(--transition-default);
+  }
+  
+  .sub-menu li a:hover {
+    background-color: #f0f0f0;
+  }
+  
